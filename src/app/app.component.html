@@ -1,5 +1,16 @@
-{{ minutes }}:{{ seconds }}
-
-<div class="row">
-  <button class="btn btn-success">Start</button>
+<div class="container">
+  <div class="row">
+    <div class="row time">
+      <div class="timer">{{ minutes }}:{{ getDoubleDigit(seconds) }}</div>
+    </div>
+    <div class="row btnRow">
+      <button class="btn btn-success" (click)="onStart()">Start</button>
+      <button class="btn btn-success" (click)="onStop()">Stop</button>
+      <button class="btn btn-success" (click)="onReset()">Reset</button>
+    </div>
+    <div class="row btnRow">
+      <button class="btn btn-success" (click)="plusFive()">+5 sec</button>
+      <button class="btn btn-success" (click)="minusFive()">-5 sec</button>
+    </div>
+  </div>
 </div>
